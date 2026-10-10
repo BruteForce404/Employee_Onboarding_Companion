@@ -1,0 +1,10 @@
+langgraph>=1.0
+langchain-core
+langchain-groq
+langchain-mcp-adapters
+mcp
+python-dotenv
+truststore
+streamlit
+psycopg[binary]
+langgraph-checkpoint-postgres

@@ -1,0 +1,8 @@
+.venv/
+.pgdata/
+__pycache__/
+.pytest_cache/
+.env
+data/case_store.json
+data/case_store.tmp
+*.tmp
