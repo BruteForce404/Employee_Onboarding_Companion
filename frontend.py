@@ -28,6 +28,8 @@ div[data-testid="stButton"] > button[kind="primary"], div[data-testid="stButton"
   background: #1d4a38; color: #f6f1e7; border: none; border-radius: 999px;
 }
 .block-container { padding-top: 1.4rem; max-width: 1080px; }
+.brand { background: #1d1a16; color: #f6f1e7; border-radius: 18px; padding: 1rem 1.35rem 1.05rem; margin-bottom: 1.2rem; }
+.brand-name { font-size: 1.75rem; line-height: 1.15; color: #f6f1e7; margin: 0; }
 </style>
 """,
     unsafe_allow_html=True,
@@ -65,8 +67,14 @@ def _run(query: str, forced_intent: str = "", forced_requirement_id: str = ""):
 
 _init()
 
+st.markdown(
+    "<div class='brand'><div class='kicker' style='color:#c9bfb0'></div>"
+    "<h1 class='brand-name'>Employee Onboarding Companion</h1></div>",
+    unsafe_allow_html=True,
+)
+
 with st.sidebar:
-    st.markdown("<div class='serif' style='font-size:1.35rem'>Onboarding</div>", unsafe_allow_html=True)
+    st.markdown("<div class='serif' style='font-size:1.35rem'>Employee Onboarding Companion</div>", unsafe_allow_html=True)
     st.caption("One case file. One next step.")
     role = st.radio("I am", ["Joining", "Onboarding owner"], index=0 if st.session_state.role == "employee" else 1)
     new_role = "employee" if role == "Joining" else "hr"
